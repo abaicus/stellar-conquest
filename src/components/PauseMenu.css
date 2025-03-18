@@ -1,0 +1,174 @@
+.pause-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.pause-menu {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pause-menu h2 {
+  text-align: center;
+  margin: 0;
+  color: #4287f5;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.pause-menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pause-button {
+  background-color: #4287f5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.pause-button:hover {
+  background-color: #2a68d3;
+  transform: translateY(-2px);
+}
+
+.reset-button {
+  background-color: #e74c3c;
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+}
+
+.exit-button {
+  background-color: #7f8c8d;
+}
+
+.exit-button:hover {
+  background-color: #6b7a7b;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.game-status {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-status h3 {
+  font-size: 1.2rem;
+  margin: 0 0 12px 0;
+  color: #4287f5;
+  text-align: center;
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-info p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.pause-help {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.pause-help h3 {
+  margin: 0 0 14px 0;
+  color: #4287f5;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 6px;
+}
+
+.pause-help ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pause-help li {
+  margin-bottom: 10px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.pause-help li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4287f5;
+}
+
+.pause-help li:last-child {
+  margin-bottom: 0;
+}
+
+.upgrade-icon {
+  color: #27ae60;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+  .pause-help {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pause-menu {
+    width: 90%;
+    padding: 20px;
+  }
+} 

@@ -1,0 +1,142 @@
+.planet-info {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  color: white;
+  font-size: 14px;
+  z-index: 10;
+  pointer-events: none; /* Disable pointer events to allow clicks through */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(32, 156, 238, 0.2);
+  animation: dropdown 0.2s cubic-bezier(0.17, 0.67, 0.28, 1.25);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.planet-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3498db;
+  text-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.planet-info p {
+  margin: 4px 0;
+}
+
+.planet-info .stat-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.planet-info-header {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.planet-info-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.planet-info-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.planet-info-header span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.planet-info-content {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 3px 3px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ddd;
+  transition: all 0.2s;
+}
+
+.info-row:hover {
+  color: white;
+  transform: translateX(2px);
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-row span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.level-up-icon {
+  margin-left: 4px;
+  color: #2ecc71;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+} 
